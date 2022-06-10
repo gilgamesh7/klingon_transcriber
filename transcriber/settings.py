@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-%%w__&q)zmn%hl_t8l7_0cgx9s%$&5nj(syf*h_-ddtt##qm#(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'klingon',
 ]
 
 MIDDLEWARE = [
@@ -56,8 +57,10 @@ ROOT_URLCONF = 'transcriber.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'klingon','templates'),
-                os.path.join(BASE_DIR, 'klingon','static'),],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'klingon','templates'),
+            os.path.join(BASE_DIR, 'klingon','static'),
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
