@@ -1,5 +1,10 @@
 # klingon_transcriber
 
+# Link to app
+On Azure : [tlhlngan wo' taHjaj !](https://klingon-transcriber.azurewebsites.net/klingon/gettext/)
+<br/>
+In Dev : [tlhlngan wo' taHjaj !](http://127.0.0.1:8000/klingon/gettext/)
+
 # Pictures of pIqaD
 [Klingon Wiki](http://klingon.wiki/En/PIqaD)
 

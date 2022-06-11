@@ -14,7 +14,7 @@ def klingon_transcriber(request):
 
         klingon_image_list = get_klingon_image_list(input_klingon)
 
-    form = InputKlingonForm()
+    form = InputKlingonForm(initial={'input_klingon': ' '})
 
     context = {'form': form, 'klingon_images': klingon_image_list, 'input_klingon': input_klingon}
 
