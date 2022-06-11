@@ -1,4 +1,3 @@
-from django.contrib import admin
 from django.urls import path
 
 from klingon import views
@@ -6,5 +5,5 @@ from klingon import views
 app_name = "klingon"
 
 urlpatterns = [
-    path('', views.klingon_transcriber , name='klingon')
+    path('gettext/', views.klingon_transcriber , name='klingon'),
 ]

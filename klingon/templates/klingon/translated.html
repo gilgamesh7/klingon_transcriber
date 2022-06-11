@@ -1,0 +1,17 @@
+{% extends 'klingon/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="container">
+        <h1>tlhlngan wo' taHjaj ! </h1>
+    </div>
+
+    <div>
+        {% for image in images %}
+            <img src="{% static image %}" class="img-fluid" alt="...">
+        {% endfor %}
+    </div>
+
+{% endblock %}

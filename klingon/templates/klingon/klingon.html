@@ -4,13 +4,37 @@
 
 {% block content %}
 
-    <div class="container">
+    <div class="col text-center text-bg-danger p-3">
         <h1>tlhlngan wo' taHjaj ! </h1>
     </div>
-        {% for image in images %}
-        <img src="{% static image %}" class="img-fluid" alt="...">
-        {% endfor %}
+
+    <hr/>
+
+    <div>
+        <form action="" method="get">
+            <div class="col text-center mt-5">
+                <span class="font-weight-bold">    
+                    {{ form.input_klingon.label }}
+                </span>
+                <span class="border border-danger text-bg-danger">       
+                    {{ form.input_klingon }}
+                </span>
+            </div>
+
+            <div class="col text-center mt-2">
+                <input class="btn btn-danger" type="submit" value="Change To pIqaD">
+            </div>
+          </form>
     </div>
 
+    <div class="border border-danger mt-5" >
+        {{ input_klingon }}
+    </div>
+
+    <div class="border border-danger mt-5" >
+        {% for image in klingon_images %}
+            <img src="{% static image %}" class="img-fluid" style="max-width: 4rem;" alt="...">
+        {% endfor %}
+    </div>
 
 {% endblock %}
