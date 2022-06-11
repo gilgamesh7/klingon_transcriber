@@ -23,34 +23,45 @@ def klingon_transcriber(request):
 
 def get_klingon_image_list(input_klingon):
     print(input_klingon)
-    image_list = []
+    image_list = ['klingon/images/batleth.png']
     
     if input_klingon is not None :
-        for character in input_klingon:
+        # for character in input_klingon:
+        index = 0 
+        while index < len(input_klingon) :
+            character = input_klingon[index]
+
             if character == 'a':
                 image_list.append('klingon/images/a.png')
             elif character == 'b':
                 image_list.append('klingon/images/b.png')
             elif character == 'c':
                 image_list.append('klingon/images/ch.png')
-                continue
+                index += 1
             elif character == 'D':
                 image_list.append('klingon/images/D.png')
             elif character == 'e':
                 image_list.append('klingon/images/e.png')
             elif character == 'g':
                 image_list.append('klingon/images/gh.png')
-                continue
+                if input_klingon[index+1] == 'h' :
+                    index += 1
             elif character == 'H':
                 image_list.append('klingon/images/H.png')
             elif character == 'I':
                 image_list.append('klingon/images/I.png')
+            elif character == 'j':
+                image_list.append('klingon/images/j.png')
             elif character == 'l':
                 image_list.append('klingon/images/L.png')
             elif character == 'm':
                 image_list.append('klingon/images/m.png')
             elif character == 'n':
-                image_list.append('klingon/images/n.png')
+                if input_klingon[index+1] == 'g' :
+                    index += 1
+                    image_list.append('klingon/images/ng.png')
+                else :
+                    image_list.append('klingon/images/n.png')
             elif character == 'o':
                 image_list.append('klingon/images/o.png')
             elif character == 'p':
@@ -64,7 +75,11 @@ def get_klingon_image_list(input_klingon):
             elif character == 'S':
                 image_list.append('klingon/images/S.png')
             elif character == 't':
-                image_list.append('klingon/images/t.png')
+                if input_klingon[index+1] == 'l' and input_klingon[index+2] == 'h':
+                    image_list.append('klingon/images/tlh.png')
+                    index += 2
+                else :
+                    image_list.append('klingon/images/t.png')
             elif character == 'u':
                 image_list.append('klingon/images/u.png')
             elif character == 'v':
@@ -75,8 +90,12 @@ def get_klingon_image_list(input_klingon):
                 image_list.append('klingon/images/y.png')
             elif character == '\'':
                 image_list.append('klingon/images/qaghwI.png')
+            elif character == ' ':
+                image_list.append('klingon/images/space.png')
 
-    image_list.append('klingon/images/tlhlngan.png')
+            index += 1
+
+    image_list.append('klingon/images/batleth.png')
 
     print(image_list)
     return image_list
