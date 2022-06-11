@@ -17,3 +17,10 @@ python3 manage.py runserver
 
 # For sqllite db admin
 - Create super user : python3 manage.py createsuperuser
+
+# To make ready for Azure
+1. Add requirements.txt
+2. Add 'klingon-transcriber.azurewebsites.net' to ALLOWED_HOSTS
+3. Static_root to settings.py
+4. Add to u=rlsettings in url.py + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
