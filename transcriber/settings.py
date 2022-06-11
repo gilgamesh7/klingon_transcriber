@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-%%w__&q)zmn%hl_t8l7_0cgx9s%$&5nj(syf*h_-ddtt##qm#(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['klingon-transcriber.azurewebsites.net','127.0.0.1']
 
 
 # Application definition
