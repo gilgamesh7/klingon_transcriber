@@ -44,7 +44,7 @@ def get_klingon_image_list(input_klingon):
                 image_list.append('klingon/images/e.png')
             elif character == 'g':
                 image_list.append('klingon/images/gh.png')
-                if input_klingon[index+1] == 'h' :
+                if index+1 != len(input_klingon) and input_klingon[index+1] == 'h' :
                     index += 1
             elif character == 'H':
                 image_list.append('klingon/images/H.png')
@@ -57,7 +57,7 @@ def get_klingon_image_list(input_klingon):
             elif character == 'm':
                 image_list.append('klingon/images/m.png')
             elif character == 'n':
-                if input_klingon[index+1] == 'g' :
+                if index+1 != len(input_klingon) and input_klingon[index+1] == 'g' :
                     index += 1
                     image_list.append('klingon/images/ng.png')
                 else :
@@ -75,7 +75,7 @@ def get_klingon_image_list(input_klingon):
             elif character == 'S':
                 image_list.append('klingon/images/S.png')
             elif character == 't':
-                if input_klingon[index+1] == 'l' and input_klingon[index+2] == 'h':
+                if index+1 != len(input_klingon) and input_klingon[index+1] == 'l' and input_klingon[index+2] == 'h':
                     image_list.append('klingon/images/tlh.png')
                     index += 2
                 else :
